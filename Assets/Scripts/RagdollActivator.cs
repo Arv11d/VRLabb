@@ -1,15 +1,19 @@
 using UnityEngine;
+using UnityEngine.AI;
 
 public class RagdollActivator : MonoBehaviour
 {
     public Animator animator;
     private Rigidbody[] allRigidbodies;
     private Collider[] allColliders;
+    public AudioClip hitSound;
+    private NavMeshAgent agent;
 
     void Awake()
     {
         allRigidbodies = GetComponentsInChildren<Rigidbody>();
         allColliders = GetComponentsInChildren<Collider>();
+        agent = GetComponent<NavMeshAgent>();
 
         SetRagdoll(false); // Start with ragdoll off
     }
@@ -25,6 +29,14 @@ public class RagdollActivator : MonoBehaviour
         {
             if (col.gameObject != this.gameObject)
                 col.enabled = state;
+        }
+
+        if (agent != null)
+            agent.enabled = !state;
+
+        if (state && hitSound != null)
+        {
+            AudioSource.PlayClipAtPoint(hitSound, transform.position);
         }
     }
 }
