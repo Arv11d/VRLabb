@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 3
   tags:
   - Hammer
+  - Bow
+  - PlayerHand
+  - Arrow
   layers:
   - Default
   - TransparentFX
