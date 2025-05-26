@@ -8,7 +8,7 @@ public class RagdollActivator : MonoBehaviour
     private Collider[] allColliders;
     public AudioClip hitSound;
     private NavMeshAgent agent;
-
+    private bool AlreadyHit = false;
     void Awake()
     {
         allRigidbodies = GetComponentsInChildren<Rigidbody>();
@@ -34,9 +34,10 @@ public class RagdollActivator : MonoBehaviour
         if (agent != null)
             agent.enabled = !state;
 
-        if (state && hitSound != null)
+        if (state && hitSound != null && AlreadyHit == false)
         {
             AudioSource.PlayClipAtPoint(hitSound, transform.position);
+            AlreadyHit = true;
         }
     }
 }

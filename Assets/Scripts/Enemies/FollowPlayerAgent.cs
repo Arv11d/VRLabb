@@ -8,23 +8,45 @@ public class FollowPlayerAgent : MonoBehaviour
     public Animator animator;
 
     private bool isRagdolled = false;
+    private bool playerInTrigger = false;
+    private float originalSpeed;
 
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
         player = Camera.main.transform;
+
+        if (agent != null)
+            originalSpeed = agent.speed;
     }
 
     void Update()
     {
-        if (isRagdolled) return;
+        if (isRagdolled || agent == null || !agent.isOnNavMesh || player == null) return;
 
-        if (player != null && agent != null && agent.isOnNavMesh)
+        // Check if we're in attack animation
+        bool isAttacking = false;
+        if (animator != null)
         {
-            Vector3 target = player.position;
-            target.y = transform.position.y;
+            AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
+            isAttacking = stateInfo.IsName("MeleeAttack_OneHanden");
+        }
 
-            agent.SetDestination(target);
+        // Always update destination so the agent can rotate toward player
+        Vector3 target = player.position;
+        target.y = transform.position.y;
+        agent.SetDestination(target);
+
+        if (isAttacking || playerInTrigger)
+        {
+            // Stop movement, but allow rotation
+            agent.speed = 0f;
+            animator.SetFloat("Speed", 0f);
+        }
+        else
+        {
+            if (agent.speed == 0f)
+                agent.speed = originalSpeed;
 
             float speed = agent.velocity.magnitude;
             animator.SetFloat("Speed", speed);
@@ -37,12 +59,27 @@ public class FollowPlayerAgent : MonoBehaviour
 
         if (agent != null && agent.isActiveAndEnabled)
         {
-            agent.ResetPath(); // Stop movement
-            agent.enabled = false; // Disable completely
+            agent.ResetPath();
+            agent.enabled = false;
         }
 
         if (animator != null)
             animator.enabled = false;
     }
 
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            playerInTrigger = true;
+        }
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            playerInTrigger = false;
+        }
+    }
 }

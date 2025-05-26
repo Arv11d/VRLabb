@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class HammerTrigger : MonoBehaviour
 {
-    public float hitForce = 500f;
+    public float hitForce = 0f;
 
     private void OnTriggerEnter(Collider other)
     {
