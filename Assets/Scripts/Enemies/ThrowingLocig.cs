@@ -9,8 +9,6 @@ public class ThrowingLogic : MonoBehaviour
 
     public void DetachAndThrow()
     {
-        Debug.Log("DetachAndThrow called on ThrowingLogic!");
-
         if (throwablePrefab == null || throwSpawnPoint == null)
         {
             Debug.LogWarning("ThrowablePrefab or ThrowSpawnPoint not assigned!");

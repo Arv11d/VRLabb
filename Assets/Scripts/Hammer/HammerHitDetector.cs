@@ -1,6 +1,5 @@
 using UnityEngine;
-
-public class HammerHitDetector: MonoBehaviour
+public class HammerHitDetector : MonoBehaviour
 {
     public float hitForce = 200f;
 

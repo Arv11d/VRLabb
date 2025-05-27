@@ -4,22 +4,31 @@ public class BottleImpact : MonoBehaviour
 {
     public GameObject splashEffectPrefab;
     public float destroyDelay = 0.1f;
+    public AudioSource impactAudioSource; // Assign this in the inspector
 
-    void OnTriggerEnter(Collider collider)
+    void OnCollisionEnter(Collision collision)
     {
-        string otherTag = collider.gameObject.tag;
+        string otherTag = collision.gameObject.tag;
 
         // Only destroy if it's NOT plagueDoctor AND NOT another Bottle
         if (otherTag != "PlagueDoctor" && otherTag != "Bottle")
         {
             Debug.Log($"Bottle hit {otherTag}!");
 
-            if (splashEffectPrefab != null)
+            // Play impact sound
+            if (impactAudioSource != null && !impactAudioSource.isPlaying)
             {
-                Vector3 effectPosition = transform.position;
-                Quaternion rot = Quaternion.identity;
+                impactAudioSource.Play();
+            }
 
-                Instantiate(splashEffectPrefab, effectPosition, rot);
+            // Create splash effect at contact point
+            if (splashEffectPrefab != null && collision.contactCount > 0)
+            {
+                ContactPoint contact = collision.GetContact(0);
+                Vector3 hitPosition = contact.point;
+                Quaternion hitRotation = Quaternion.LookRotation(contact.normal);
+
+                Instantiate(splashEffectPrefab, hitPosition, hitRotation);
             }
 
             Destroy(gameObject, destroyDelay);
