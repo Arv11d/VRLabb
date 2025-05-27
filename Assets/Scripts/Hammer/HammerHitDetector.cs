@@ -1,25 +1,28 @@
 using UnityEngine;
 
-public class HammerHitDetector : MonoBehaviour
+public class HammerHitDetector: MonoBehaviour
 {
-    private void OnCollisionEnter(Collision collision)
+    public float hitForce = 200f;
+
+    private void OnTriggerEnter(Collider other)
     {
-        var ragdoll = collision.collider.GetComponentInParent<RagdollActivator>();
+        if (!other.CompareTag("Hitbox"))
+            return;
+        // Try to get the RagdollActivator
+        RagdollActivator ragdoll = other.GetComponentInParent<RagdollActivator>();
         if (ragdoll != null)
         {
             ragdoll.SetRagdoll(true);
 
-            // Get the root GameObject with the FollowPlayerAgent
-            FollowPlayerAgent ai = ragdoll.transform.root.GetComponent<FollowPlayerAgent>();
-            if (ai != null)
+            // Apply force to the hit Rigidbody (if it exists)
+            Rigidbody hitBody = other.attachedRigidbody;
+            if (hitBody != null)
             {
-                ai.DisableMovement();
-            }
-            else
-            {
-                Debug.LogWarning("FollowPlayerAgent not found on root of " + ragdoll.transform.root.name);
+                Vector3 forceDirection = hitBody.transform.position - transform.position;
+                forceDirection.Normalize();
+
+                hitBody.AddForce(forceDirection * hitForce, ForceMode.Impulse);
             }
         }
     }
-
 }

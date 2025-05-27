@@ -179,7 +179,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -1109,7 +1109,7 @@ ParticleSystem:
       countCurve:
         serializedVersion: 2
         minMaxState: 0
-        scalar: 80
+        scalar: 100
         minScalar: 30
         maxCurve:
           serializedVersion: 2
@@ -5031,14 +5031,15 @@ GameObject:
   - component: {fileID: 7516147023265246560}
   - component: {fileID: 7516147023266049344}
   - component: {fileID: 7516147023267016576}
-  - component: {fileID: 7516147023265018177}
-  - component: {fileID: 5420260582849213204}
+  - component: {fileID: 2435374339313250548}
+  - component: {fileID: 3872739181494996979}
+  - component: {fileID: 8166657881625244908}
   m_Layer: 0
   m_Name: Potion_Green
-  m_TagString: Untagged
+  m_TagString: Bottle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &7516147023265246560
 Transform:
@@ -5111,8 +5112,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &7516147023265018177
-MeshCollider:
+--- !u!136 &2435374339313250548
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -5126,14 +5127,15 @@ MeshCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 7e1b98bbe17b88644aea6625cb61b2c5, type: 3}
---- !u!114 &5420260582849213204
+  serializedVersion: 2
+  m_Radius: 0.06797272
+  m_Height: 0.24570833
+  m_Direction: 1
+  m_Center: {x: -0.000000006865016, y: 0.1228542, z: -0.000000001830671}
+--- !u!114 &3872739181494996979
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5146,6 +5148,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   splashEffectPrefab: {fileID: 6005020954560589820}
-  destroyDelay: 0.1
-  breakSound: {fileID: 8300000, guid: 201af1a3842f47e4da743e2b5927b99f, type: 3}
-  audioSource: {fileID: 3709635147479826799}
+  destroyDelay: 0.01
+--- !u!54 &8166657881625244908
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7516147023265018176}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0

@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class ThrowController : MonoBehaviour
 {
@@ -19,20 +20,30 @@ public class ThrowController : MonoBehaviour
     {
         if (currentBottle == null) return;
 
-        currentBottle.transform.parent = null;
+        GameObject bottleToThrow = currentBottle;
+        currentBottle = null;
 
-        // Enable physics and throw
-        Rigidbody rb = currentBottle.GetComponent<Rigidbody>();
+        bottleToThrow.transform.parent = null;
+
+        // Start coroutine to enable physics next frame
+        StartCoroutine(EnablePhysicsNextFrame(bottleToThrow));
+
+        Destroy(bottleToThrow, 5f);
+        Invoke(nameof(SpawnBottle), respawnDelay);
+    }
+
+    IEnumerator EnablePhysicsNextFrame(GameObject bottle)
+    {
+        yield return null; // Wait one frame to avoid overlap issues
+
+        Rigidbody rb = bottle.GetComponent<Rigidbody>();
         if (rb != null)
         {
             rb.isKinematic = false;
             rb.AddForce(throwOrigin.forward * throwForce, ForceMode.Impulse);
         }
-
-        Destroy(currentBottle, 5f);
-        Invoke(nameof(SpawnBottle), respawnDelay);
-        currentBottle = null;
     }
+
 
 
     void SpawnBottle()
