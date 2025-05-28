@@ -1512,6 +1512,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 1334264269}
   hitSound: {fileID: 8300000, guid: 0dece9f246b95da4c88d776768af4888, type: 3}
+  scriptsToDisable: []
 --- !u!136 &362246568
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1548,6 +1549,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 1334264269}
+  attackStateName: MeleeAttack_OneHanden
+  attackRange: 2
 --- !u!195 &362246570
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -3954,6 +3957,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 1912136443}
+  attackStateName: MeleeAttack_OneHanden
+  attackRange: 2
 --- !u!195 &946719389
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -5424,6 +5429,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 1049187719}
   hitSound: {fileID: 8300000, guid: 0dece9f246b95da4c88d776768af4888, type: 3}
+  scriptsToDisable: []
 --- !u!136 &1049187716
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5460,6 +5466,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 1049187719}
+  attackStateName: MeleeAttack_OneHanden
+  attackRange: 2
 --- !u!195 &1049187718
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -20169,6 +20177,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 1912136443}
   hitSound: {fileID: 8300000, guid: 0dece9f246b95da4c88d776768af4888, type: 3}
+  scriptsToDisable: []
 --- !u!95 &1912136443
 Animator:
   serializedVersion: 7
@@ -20601,6 +20610,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 1915499032}
   hitSound: {fileID: 8300000, guid: ecc70df623c6fc54099d396508ef543f, type: 3}
+  scriptsToDisable: []
 --- !u!4 &1915499040 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8754843837112285606, guid: 727ead53be8c0c04aa7d086421f07ce0,
@@ -20881,6 +20891,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 2077343700}
   hitSound: {fileID: 8300000, guid: 0dece9f246b95da4c88d776768af4888, type: 3}
+  scriptsToDisable: []
 --- !u!136 &2077343697
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -20917,6 +20928,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 2077343700}
+  attackStateName: MeleeAttack_OneHanden
+  attackRange: 2
 --- !u!195 &2077343699
 NavMeshAgent:
   m_ObjectHideFlags: 0
