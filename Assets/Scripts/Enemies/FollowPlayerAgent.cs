@@ -3,12 +3,16 @@ using UnityEngine.AI;
 
 public class FollowPlayerAgent : MonoBehaviour
 {
+    [Header("References")]
+    public Animator animator;
     private NavMeshAgent agent;
     private Transform player;
-    public Animator animator;
+
+    [Header("Attack Settings")]
+    public string attackStateName = "MeleeAttack_OneHanden";
+    public float attackRange = 2f;
 
     private bool isRagdolled = false;
-    private bool playerInTrigger = false;
     private float originalSpeed;
 
     void Start()
@@ -22,31 +26,39 @@ public class FollowPlayerAgent : MonoBehaviour
 
     void Update()
     {
-        if (isRagdolled || agent == null || !agent.isOnNavMesh || player == null) return;
+        if (isRagdolled || agent == null || !agent.isOnNavMesh || player == null)
+            return;
 
-        // Check if we're in attack animation
+        float distanceToPlayer = Vector3.Distance(transform.position, player.position);
+
+        // Determine if in attack animation
         bool isAttacking = false;
         if (animator != null)
         {
             AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
-            isAttacking = stateInfo.IsName("MeleeAttack_OneHanden");
+            isAttacking = stateInfo.IsName(attackStateName);
         }
 
-        // Always update destination so the agent can rotate toward player
-        Vector3 target = player.position;
-        target.y = transform.position.y;
-        agent.SetDestination(target);
-
-        if (isAttacking || playerInTrigger)
+        // Always rotate towards player
+        Vector3 direction = player.position - transform.position;
+        direction.y = 0f;
+        if (direction != Vector3.zero)
         {
-            // Stop movement, but allow rotation
+            Quaternion lookRotation = Quaternion.LookRotation(direction);
+            transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5f);
+        }
+
+        // Stop moving if in attack range or already attacking
+        if (distanceToPlayer <= attackRange || isAttacking)
+        {
             agent.speed = 0f;
+            agent.SetDestination(transform.position); // Stop moving
             animator.SetFloat("Speed", 0f);
         }
         else
         {
-            if (agent.speed == 0f)
-                agent.speed = originalSpeed;
+            agent.speed = originalSpeed;
+            agent.SetDestination(player.position);
 
             float speed = agent.velocity.magnitude;
             animator.SetFloat("Speed", speed);
@@ -65,21 +77,5 @@ public class FollowPlayerAgent : MonoBehaviour
 
         if (animator != null)
             animator.enabled = false;
-    }
-
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            playerInTrigger = true;
-        }
-    }
-
-    void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            playerInTrigger = false;
-        }
     }
 }

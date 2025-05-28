@@ -19,7 +19,6 @@ public class BlockedAttack : MonoBehaviour
     {
         if (animator != null)
         {
-            Debug.Log("Interrupt!");
             animator.SetTrigger("Interrupt"); // Use trigger to break the attack
         }
 
