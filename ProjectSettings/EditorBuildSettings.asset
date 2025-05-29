@@ -47,6 +47,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/KingndomArena2.unity
     guid: d578fe23c1a17704c9fc2a82a0a31832
+  - enabled: 1
+    path: Assets/Scenes/VictoryScene.unity
+    guid: 16cac22e6cccc0949a4bd8cf8b2a621d
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: bfa1182bd221b4ca89619141f66f1260,
       type: 2}
