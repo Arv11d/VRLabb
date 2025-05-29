@@ -48,12 +48,16 @@ public class FollowPlayerAgent : MonoBehaviour
             transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5f);
         }
 
-        // Stop moving if in attack range or already attacking
-        if (distanceToPlayer <= attackRange || isAttacking)
+        if (distanceToPlayer <= attackRange)
         {
             agent.speed = 0f;
-            agent.SetDestination(transform.position); // Stop moving
+            agent.SetDestination(transform.position); 
             animator.SetFloat("Speed", 0f);
+
+            if (!isAttacking)
+            {
+                animator.SetTrigger("Attack");  
+            }
         }
         else
         {
