@@ -21237,7 +21237,8 @@ PrefabInstance:
       propertyPath: vignetteImage
       value: 
       objectReference: {fileID: 859182768}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6452081324086822464, guid: aff59c8dfce4abc4ca8c2cefeb583395, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
