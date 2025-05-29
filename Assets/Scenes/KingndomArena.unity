@@ -421,15 +421,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5b4f476d3ca9f849a5203a5e7bf333e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spine: {fileID: 0}
-  upperLeg_L: {fileID: 0}
-  upperLeg_R: {fileID: 0}
-  lowerLeg_L: {fileID: 0}
-  lowerLeg_R: {fileID: 0}
-  shoulder_L: {fileID: 0}
-  shoulder_R: {fileID: 0}
-  elbow_L: {fileID: 0}
-  elbow_R: {fileID: 0}
 --- !u!4 &70590760 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4427217092431386, guid: edfd047280446914aa722821df7ee5f1,
@@ -913,7 +904,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4687036833684834, guid: 32ea7ec0924eccb4688c22639285aed1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.99
+      value: -5.025
       objectReference: {fileID: 0}
     - target: {fileID: 4687036833684834, guid: 32ea7ec0924eccb4688c22639285aed1, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1055,15 +1046,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5b4f476d3ca9f849a5203a5e7bf333e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spine: {fileID: 0}
-  upperLeg_L: {fileID: 0}
-  upperLeg_R: {fileID: 0}
-  lowerLeg_L: {fileID: 0}
-  lowerLeg_R: {fileID: 0}
-  shoulder_L: {fileID: 0}
-  shoulder_R: {fileID: 0}
-  elbow_L: {fileID: 0}
-  elbow_R: {fileID: 0}
 --- !u!1001 &167251636
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1785,15 +1767,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5b4f476d3ca9f849a5203a5e7bf333e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spine: {fileID: 0}
-  upperLeg_L: {fileID: 0}
-  upperLeg_R: {fileID: 0}
-  lowerLeg_L: {fileID: 0}
-  lowerLeg_R: {fileID: 0}
-  shoulder_L: {fileID: 0}
-  shoulder_R: {fileID: 0}
-  elbow_L: {fileID: 0}
-  elbow_R: {fileID: 0}
 --- !u!4 &181841833 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4285882004570854, guid: 4f671f96ada2b43438b517dbc501e523,
@@ -2359,7 +2332,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4687036833684834, guid: 32ea7ec0924eccb4688c22639285aed1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.99
+      value: -5.001
       objectReference: {fileID: 0}
     - target: {fileID: 4687036833684834, guid: 32ea7ec0924eccb4688c22639285aed1, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2484,7 +2457,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4687036833684834, guid: 32ea7ec0924eccb4688c22639285aed1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.99
+      value: -4.996
       objectReference: {fileID: 0}
     - target: {fileID: 4687036833684834, guid: 32ea7ec0924eccb4688c22639285aed1, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2564,15 +2537,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5b4f476d3ca9f849a5203a5e7bf333e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spine: {fileID: 0}
-  upperLeg_L: {fileID: 0}
-  upperLeg_R: {fileID: 0}
-  lowerLeg_L: {fileID: 0}
-  lowerLeg_R: {fileID: 0}
-  shoulder_L: {fileID: 0}
-  shoulder_R: {fileID: 0}
-  elbow_L: {fileID: 0}
-  elbow_R: {fileID: 0}
 --- !u!1001 &370443742
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3043,15 +3007,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5b4f476d3ca9f849a5203a5e7bf333e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spine: {fileID: 0}
-  upperLeg_L: {fileID: 0}
-  upperLeg_R: {fileID: 0}
-  lowerLeg_L: {fileID: 0}
-  lowerLeg_R: {fileID: 0}
-  shoulder_L: {fileID: 0}
-  shoulder_R: {fileID: 0}
-  elbow_L: {fileID: 0}
-  elbow_R: {fileID: 0}
 --- !u!1001 &401365247
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3202,7 +3157,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4687036833684834, guid: 32ea7ec0924eccb4688c22639285aed1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.99
+      value: -5.021
       objectReference: {fileID: 0}
     - target: {fileID: 4687036833684834, guid: 32ea7ec0924eccb4688c22639285aed1, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3722,107 +3677,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5b4f476d3ca9f849a5203a5e7bf333e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spine: {fileID: 0}
-  upperLeg_L: {fileID: 0}
-  upperLeg_R: {fileID: 0}
-  lowerLeg_L: {fileID: 0}
-  lowerLeg_R: {fileID: 0}
-  shoulder_L: {fileID: 0}
-  shoulder_R: {fileID: 0}
-  elbow_L: {fileID: 0}
-  elbow_R: {fileID: 0}
---- !u!1 &505318763
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 505318766}
-  - component: {fileID: 505318765}
-  - component: {fileID: 505318764}
-  m_Layer: 0
-  m_Name: Main Camera
-  m_TagString: MainCamera
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!81 &505318764
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 505318763}
-  m_Enabled: 1
---- !u!20 &505318765
-Camera:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 505318763}
-  m_Enabled: 1
-  serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
-  m_projectionMatrixMode: 1
-  m_GateFitMode: 2
-  m_FOVAxisMode: 0
-  m_Iso: 200
-  m_ShutterSpeed: 0.005
-  m_Aperture: 16
-  m_FocusDistance: 10
-  m_FocalLength: 50
-  m_BladeCount: 5
-  m_Curvature: {x: 2, y: 11}
-  m_BarrelClipping: 0.25
-  m_Anamorphism: 0
-  m_SensorSize: {x: 36, y: 24}
-  m_LensShift: {x: 0, y: 0}
-  m_NormalizedViewPortRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
-  near clip plane: 0.3
-  far clip plane: 1000
-  field of view: 60
-  orthographic: 0
-  orthographic size: 5
-  m_Depth: -1
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RenderingPath: -1
-  m_TargetTexture: {fileID: 0}
-  m_TargetDisplay: 0
-  m_TargetEye: 3
-  m_HDR: 1
-  m_AllowMSAA: 1
-  m_AllowDynamicResolution: 0
-  m_ForceIntoRT: 0
-  m_OcclusionCulling: 1
-  m_StereoConvergence: 10
-  m_StereoSeparation: 0.022
---- !u!4 &505318766
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 505318763}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &519088366 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4427217092431386, guid: edfd047280446914aa722821df7ee5f1,
@@ -3990,15 +3844,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5b4f476d3ca9f849a5203a5e7bf333e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spine: {fileID: 0}
-  upperLeg_L: {fileID: 0}
-  upperLeg_R: {fileID: 0}
-  lowerLeg_L: {fileID: 0}
-  lowerLeg_R: {fileID: 0}
-  shoulder_L: {fileID: 0}
-  shoulder_R: {fileID: 0}
-  elbow_L: {fileID: 0}
-  elbow_R: {fileID: 0}
 --- !u!1001 &569635974
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5051,7 +4896,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4687036833684834, guid: 32ea7ec0924eccb4688c22639285aed1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.99
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 4687036833684834, guid: 32ea7ec0924eccb4688c22639285aed1, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5822,15 +5667,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5b4f476d3ca9f849a5203a5e7bf333e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spine: {fileID: 0}
-  upperLeg_L: {fileID: 0}
-  upperLeg_R: {fileID: 0}
-  lowerLeg_L: {fileID: 0}
-  lowerLeg_R: {fileID: 0}
-  shoulder_L: {fileID: 0}
-  shoulder_R: {fileID: 0}
-  elbow_L: {fileID: 0}
-  elbow_R: {fileID: 0}
 --- !u!4 &782022863 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4329523563007556, guid: d26afbeb83bf4c546b37df80aa02596e,
@@ -5918,15 +5754,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5b4f476d3ca9f849a5203a5e7bf333e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spine: {fileID: 0}
-  upperLeg_L: {fileID: 0}
-  upperLeg_R: {fileID: 0}
-  lowerLeg_L: {fileID: 0}
-  lowerLeg_R: {fileID: 0}
-  shoulder_L: {fileID: 0}
-  shoulder_R: {fileID: 0}
-  elbow_L: {fileID: 0}
-  elbow_R: {fileID: 0}
 --- !u!4 &797268963 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4893815277285000, guid: 49d2da42a5c6f3045be3d16b62c5e1bf,
@@ -6166,15 +5993,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5b4f476d3ca9f849a5203a5e7bf333e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spine: {fileID: 0}
-  upperLeg_L: {fileID: 0}
-  upperLeg_R: {fileID: 0}
-  lowerLeg_L: {fileID: 0}
-  lowerLeg_R: {fileID: 0}
-  shoulder_L: {fileID: 0}
-  shoulder_R: {fileID: 0}
-  elbow_L: {fileID: 0}
-  elbow_R: {fileID: 0}
 --- !u!1001 &891636953
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6896,7 +6714,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4687036833684834, guid: 32ea7ec0924eccb4688c22639285aed1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.99
+      value: -5.01
       objectReference: {fileID: 0}
     - target: {fileID: 4687036833684834, guid: 32ea7ec0924eccb4688c22639285aed1, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7992,15 +7810,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5b4f476d3ca9f849a5203a5e7bf333e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spine: {fileID: 0}
-  upperLeg_L: {fileID: 0}
-  upperLeg_R: {fileID: 0}
-  lowerLeg_L: {fileID: 0}
-  lowerLeg_R: {fileID: 0}
-  shoulder_L: {fileID: 0}
-  shoulder_R: {fileID: 0}
-  elbow_L: {fileID: 0}
-  elbow_R: {fileID: 0}
 --- !u!1 &1109078410
 GameObject:
   m_ObjectHideFlags: 0
@@ -9782,15 +9591,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5b4f476d3ca9f849a5203a5e7bf333e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spine: {fileID: 0}
-  upperLeg_L: {fileID: 0}
-  upperLeg_R: {fileID: 0}
-  lowerLeg_L: {fileID: 0}
-  lowerLeg_R: {fileID: 0}
-  shoulder_L: {fileID: 0}
-  shoulder_R: {fileID: 0}
-  elbow_L: {fileID: 0}
-  elbow_R: {fileID: 0}
 --- !u!1001 &1271556040
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9929,15 +9729,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5b4f476d3ca9f849a5203a5e7bf333e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spine: {fileID: 0}
-  upperLeg_L: {fileID: 0}
-  upperLeg_R: {fileID: 0}
-  lowerLeg_L: {fileID: 0}
-  lowerLeg_R: {fileID: 0}
-  shoulder_L: {fileID: 0}
-  shoulder_R: {fileID: 0}
-  elbow_L: {fileID: 0}
-  elbow_R: {fileID: 0}
 --- !u!1001 &1297622807
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10556,7 +10347,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4687036833684834, guid: 32ea7ec0924eccb4688c22639285aed1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.99
+      value: -5.003
       objectReference: {fileID: 0}
     - target: {fileID: 4687036833684834, guid: 32ea7ec0924eccb4688c22639285aed1, type: 3}
       propertyPath: m_LocalPosition.z
@@ -10948,15 +10739,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5b4f476d3ca9f849a5203a5e7bf333e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spine: {fileID: 0}
-  upperLeg_L: {fileID: 0}
-  upperLeg_R: {fileID: 0}
-  lowerLeg_L: {fileID: 0}
-  lowerLeg_R: {fileID: 0}
-  shoulder_L: {fileID: 0}
-  shoulder_R: {fileID: 0}
-  elbow_L: {fileID: 0}
-  elbow_R: {fileID: 0}
 --- !u!1 &1360787131 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1841705985760018, guid: 4f671f96ada2b43438b517dbc501e523,
@@ -10981,15 +10763,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5b4f476d3ca9f849a5203a5e7bf333e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spine: {fileID: 0}
-  upperLeg_L: {fileID: 0}
-  upperLeg_R: {fileID: 0}
-  lowerLeg_L: {fileID: 0}
-  lowerLeg_R: {fileID: 0}
-  shoulder_L: {fileID: 0}
-  shoulder_R: {fileID: 0}
-  elbow_L: {fileID: 0}
-  elbow_R: {fileID: 0}
 --- !u!1001 &1364026768
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12427,15 +12200,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5b4f476d3ca9f849a5203a5e7bf333e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spine: {fileID: 0}
-  upperLeg_L: {fileID: 0}
-  upperLeg_R: {fileID: 0}
-  lowerLeg_L: {fileID: 0}
-  lowerLeg_R: {fileID: 0}
-  shoulder_L: {fileID: 0}
-  shoulder_R: {fileID: 0}
-  elbow_L: {fileID: 0}
-  elbow_R: {fileID: 0}
 --- !u!4 &1503889059
 Transform:
   m_ObjectHideFlags: 0
@@ -13460,15 +13224,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5b4f476d3ca9f849a5203a5e7bf333e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spine: {fileID: 0}
-  upperLeg_L: {fileID: 0}
-  upperLeg_R: {fileID: 0}
-  lowerLeg_L: {fileID: 0}
-  lowerLeg_R: {fileID: 0}
-  shoulder_L: {fileID: 0}
-  shoulder_R: {fileID: 0}
-  elbow_L: {fileID: 0}
-  elbow_R: {fileID: 0}
 --- !u!1 &1560831755 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1841705985760018, guid: 4f671f96ada2b43438b517dbc501e523,
@@ -13493,15 +13248,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5b4f476d3ca9f849a5203a5e7bf333e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spine: {fileID: 0}
-  upperLeg_L: {fileID: 0}
-  upperLeg_R: {fileID: 0}
-  lowerLeg_L: {fileID: 0}
-  lowerLeg_R: {fileID: 0}
-  shoulder_L: {fileID: 0}
-  shoulder_R: {fileID: 0}
-  elbow_L: {fileID: 0}
-  elbow_R: {fileID: 0}
 --- !u!4 &1568895495 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4705479547501320, guid: 1e99866fc4043f645a165bf26230ebb6,
@@ -13658,15 +13404,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5b4f476d3ca9f849a5203a5e7bf333e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spine: {fileID: 0}
-  upperLeg_L: {fileID: 0}
-  upperLeg_R: {fileID: 0}
-  lowerLeg_L: {fileID: 0}
-  lowerLeg_R: {fileID: 0}
-  shoulder_L: {fileID: 0}
-  shoulder_R: {fileID: 0}
-  elbow_L: {fileID: 0}
-  elbow_R: {fileID: 0}
 --- !u!4 &1580579947 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4705479547501320, guid: 1e99866fc4043f645a165bf26230ebb6,
@@ -14187,15 +13924,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5b4f476d3ca9f849a5203a5e7bf333e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spine: {fileID: 0}
-  upperLeg_L: {fileID: 0}
-  upperLeg_R: {fileID: 0}
-  lowerLeg_L: {fileID: 0}
-  lowerLeg_R: {fileID: 0}
-  shoulder_L: {fileID: 0}
-  shoulder_R: {fileID: 0}
-  elbow_L: {fileID: 0}
-  elbow_R: {fileID: 0}
 --- !u!1001 &1692245870
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14680,15 +14408,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5b4f476d3ca9f849a5203a5e7bf333e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spine: {fileID: 0}
-  upperLeg_L: {fileID: 0}
-  upperLeg_R: {fileID: 0}
-  lowerLeg_L: {fileID: 0}
-  lowerLeg_R: {fileID: 0}
-  shoulder_L: {fileID: 0}
-  shoulder_R: {fileID: 0}
-  elbow_L: {fileID: 0}
-  elbow_R: {fileID: 0}
 --- !u!1 &1787151176 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1841705985760018, guid: 4f671f96ada2b43438b517dbc501e523,
@@ -14713,15 +14432,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5b4f476d3ca9f849a5203a5e7bf333e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spine: {fileID: 0}
-  upperLeg_L: {fileID: 0}
-  upperLeg_R: {fileID: 0}
-  lowerLeg_L: {fileID: 0}
-  lowerLeg_R: {fileID: 0}
-  shoulder_L: {fileID: 0}
-  shoulder_R: {fileID: 0}
-  elbow_L: {fileID: 0}
-  elbow_R: {fileID: 0}
 --- !u!4 &1809927941 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4391937466002270, guid: 33b3c8e9481a5914e80712731c404004,
@@ -16336,15 +16046,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5b4f476d3ca9f849a5203a5e7bf333e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spine: {fileID: 0}
-  upperLeg_L: {fileID: 0}
-  upperLeg_R: {fileID: 0}
-  lowerLeg_L: {fileID: 0}
-  lowerLeg_R: {fileID: 0}
-  shoulder_L: {fileID: 0}
-  shoulder_R: {fileID: 0}
-  elbow_L: {fileID: 0}
-  elbow_R: {fileID: 0}
 --- !u!1001 &1981357527
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16438,15 +16139,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5b4f476d3ca9f849a5203a5e7bf333e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spine: {fileID: 0}
-  upperLeg_L: {fileID: 0}
-  upperLeg_R: {fileID: 0}
-  lowerLeg_L: {fileID: 0}
-  lowerLeg_R: {fileID: 0}
-  shoulder_L: {fileID: 0}
-  shoulder_R: {fileID: 0}
-  elbow_L: {fileID: 0}
-  elbow_R: {fileID: 0}
 --- !u!1 &1999232027 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1841705985760018, guid: 4f671f96ada2b43438b517dbc501e523,
@@ -16471,15 +16163,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5b4f476d3ca9f849a5203a5e7bf333e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spine: {fileID: 0}
-  upperLeg_L: {fileID: 0}
-  upperLeg_R: {fileID: 0}
-  lowerLeg_L: {fileID: 0}
-  lowerLeg_R: {fileID: 0}
-  shoulder_L: {fileID: 0}
-  shoulder_R: {fileID: 0}
-  elbow_L: {fileID: 0}
-  elbow_R: {fileID: 0}
 --- !u!1001 &2001754784
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17003,15 +16686,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5b4f476d3ca9f849a5203a5e7bf333e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spine: {fileID: 0}
-  upperLeg_L: {fileID: 0}
-  upperLeg_R: {fileID: 0}
-  lowerLeg_L: {fileID: 0}
-  lowerLeg_R: {fileID: 0}
-  shoulder_L: {fileID: 0}
-  shoulder_R: {fileID: 0}
-  elbow_L: {fileID: 0}
-  elbow_R: {fileID: 0}
 --- !u!1001 &2035381613
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18429,15 +18103,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5b4f476d3ca9f849a5203a5e7bf333e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spine: {fileID: 0}
-  upperLeg_L: {fileID: 0}
-  upperLeg_R: {fileID: 0}
-  lowerLeg_L: {fileID: 0}
-  lowerLeg_R: {fileID: 0}
-  shoulder_L: {fileID: 0}
-  shoulder_R: {fileID: 0}
-  elbow_L: {fileID: 0}
-  elbow_R: {fileID: 0}
 --- !u!1001 &2121594747
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18509,7 +18174,6 @@ Transform:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 505318766}
   - {fileID: 1109078412}
   - {fileID: 1498185862}
   - {fileID: 1503889059}
