@@ -5,16 +5,26 @@ using System.Collections;
 
 public class HPSystem : MonoBehaviour
 {
+    [Header("Health Settings")]
     public int maxHP = 3;
     private int currentHP;
 
+    [Header("Audio")]
     public AudioSource damageSound;
+
+    [Header("Vignette UI")]
     public Image vignetteImage;
     public Color damageColor = Color.red;
-    public Color deathColor = new Color(0, 0, 0, 0.8f); // Black with transparency
+    public Color deathColor = new Color(0, 0, 0, 0.8f);
 
-    public float vignetteDuration = 0.5f;      // Duration of damage flash
-    public float deathFadeDuration = 2f;       // Duration of death fade
+    [Header("Damage Vignette Settings")]
+    public float damageFadeInDuration = 0.2f;
+    public float damageFadeOutDuration = 0.3f;
+
+    [Header("Death Vignette Settings")]
+    public float deathFadeDuration = 2f;
+
+    [Header("Other Settings")]
     public string gameOverSceneName = "GameOverScene";
     public MonoBehaviour movementScript;
 
@@ -53,15 +63,17 @@ public class HPSystem : MonoBehaviour
                 damageSound.Play();
 
             if (vignetteImage != null)
-                StartCoroutine(FlashVignette(damageColor));
+                StartCoroutine(FlashVignette(damageColor, damageFadeInDuration, damageFadeOutDuration));
         }
     }
 
     void Die()
     {
         isDead = true;
+
         if (movementScript != null)
             movementScript.enabled = false;
+
         if (damageSound != null)
             damageSound.Play();
 
@@ -76,32 +88,28 @@ public class HPSystem : MonoBehaviour
         SceneManager.LoadScene(gameOverSceneName);
     }
 
-    IEnumerator FlashVignette(Color color)
+    IEnumerator FlashVignette(Color color, float fadeInDuration, float fadeOutDuration)
     {
-        float halfDuration = vignetteDuration / 2f;
-        float time = 0f;
-
         // Fade in
-        while (time < halfDuration)
+        float time = 0f;
+        while (time < fadeInDuration)
         {
-            float t = time / halfDuration;
+            float t = time / fadeInDuration;
             vignetteImage.color = Color.Lerp(Color.clear, color, t);
             time += Time.deltaTime;
             yield return null;
         }
-
         vignetteImage.color = color;
 
         // Fade out
         time = 0f;
-        while (time < halfDuration)
+        while (time < fadeOutDuration)
         {
-            float t = time / halfDuration;
+            float t = time / fadeOutDuration;
             vignetteImage.color = Color.Lerp(color, Color.clear, t);
             time += Time.deltaTime;
             yield return null;
         }
-
         vignetteImage.color = Color.clear;
     }
 
