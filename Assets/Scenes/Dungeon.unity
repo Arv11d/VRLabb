@@ -2879,6 +2879,7 @@ MonoBehaviour:
   npc: {fileID: 815817168}
   Tag: Weapon
   ReTriggable: 1
+  useDungeonFlag: 0
 --- !u!136 &497284413
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -8595,6 +8596,7 @@ MonoBehaviour:
   npc: {fileID: 815817168}
   Tag: Player
   ReTriggable: 0
+  useDungeonFlag: 0
 --- !u!65 &1074678855
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12360,7 +12362,7 @@ GameObject:
   - component: {fileID: 1548571649}
   m_Layer: 0
   m_Name: "\xCDntroTalk"
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12396,6 +12398,7 @@ MonoBehaviour:
   npc: {fileID: 815817168}
   Tag: Player
   ReTriggable: 0
+  useDungeonFlag: 1
 --- !u!65 &1548571650
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17074,6 +17077,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 827244035934740041, guid: ef1c4f33cce0fc04f92ff4f68d5a3404,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 827244035934740041, guid: ef1c4f33cce0fc04f92ff4f68d5a3404,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 827244035934740041, guid: ef1c4f33cce0fc04f92ff4f68d5a3404,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 827244035934740041, guid: ef1c4f33cce0fc04f92ff4f68d5a3404,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1989901662161513392, guid: ef1c4f33cce0fc04f92ff4f68d5a3404,
         type: 3}
       propertyPath: m_Pivot.x
@@ -17174,10 +17197,50 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3162085621247032237, guid: ef1c4f33cce0fc04f92ff4f68d5a3404,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3162085621247032237, guid: ef1c4f33cce0fc04f92ff4f68d5a3404,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3162085621247032237, guid: ef1c4f33cce0fc04f92ff4f68d5a3404,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3162085621247032237, guid: ef1c4f33cce0fc04f92ff4f68d5a3404,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7109826893124178986, guid: ef1c4f33cce0fc04f92ff4f68d5a3404,
         type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 8109822348478364793, guid: ef1c4f33cce0fc04f92ff4f68d5a3404,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8109822348478364793, guid: ef1c4f33cce0fc04f92ff4f68d5a3404,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8109822348478364793, guid: ef1c4f33cce0fc04f92ff4f68d5a3404,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8109822348478364793, guid: ef1c4f33cce0fc04f92ff4f68d5a3404,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8423775867668142071, guid: ef1c4f33cce0fc04f92ff4f68d5a3404,
         type: 3}
