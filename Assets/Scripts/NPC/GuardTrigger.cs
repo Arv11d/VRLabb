@@ -5,6 +5,8 @@ public class GuardTrigger : MonoBehaviour
     public AudioSource kingVoiceLine;
     private bool voicePlayed = false;
     public GuardScript leftGuard;
+    public GuardScript backleftGuard;
+    public GuardScript backrightGuard;
     public GuardScript rightGuard;
 
     private void OnTriggerEnter(Collider other)
@@ -13,6 +15,8 @@ public class GuardTrigger : MonoBehaviour
         {
             if (leftGuard != null) leftGuard.TriggerBlock();
             if (rightGuard != null) rightGuard.TriggerBlock();
+            if (backrightGuard != null) backrightGuard.TriggerBlock();
+            if (backleftGuard != null) backleftGuard.TriggerBlock();
 
             if (!voicePlayed && kingVoiceLine != null)
             {
@@ -29,6 +33,8 @@ public class GuardTrigger : MonoBehaviour
         {
             if (leftGuard != null) leftGuard.ResetPose();
             if (rightGuard != null) rightGuard.ResetPose();
+            if (backrightGuard != null) backrightGuard.ResetPose();
+            if (backleftGuard != null) backleftGuard.ResetPose();
         }
     }
 }
