@@ -13,6 +13,7 @@ public class SceneTriggerLoader : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             GameSessionData.IsDungeonButtonUnlocked = true;
+            GameSessionData.HasPlayedDungeonVoiceLine = true;
             SceneManager.LoadScene(sceneToLoad);
         }
     }

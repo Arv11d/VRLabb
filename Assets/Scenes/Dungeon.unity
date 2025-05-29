@@ -2970,6 +2970,7 @@ MonoBehaviour:
   npc: {fileID: 815817168}
   Tag: Weapon
   ReTriggable: 1
+  useDungeonFlag: 0
 --- !u!136 &497284413
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -8714,6 +8715,7 @@ MonoBehaviour:
   npc: {fileID: 815817168}
   Tag: Player
   ReTriggable: 0
+  useDungeonFlag: 0
 --- !u!65 &1074678855
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12379,7 +12381,7 @@ GameObject:
   - component: {fileID: 1548571649}
   m_Layer: 0
   m_Name: "\xCDntroTalk"
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12415,6 +12417,7 @@ MonoBehaviour:
   npc: {fileID: 815817168}
   Tag: Player
   ReTriggable: 0
+  useDungeonFlag: 1
 --- !u!65 &1548571650
 BoxCollider:
   m_ObjectHideFlags: 0
