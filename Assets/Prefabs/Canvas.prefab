@@ -149,8 +149,8 @@ GameObject:
   - component: {fileID: 6986453219681173583}
   - component: {fileID: 977995948931445828}
   - component: {fileID: 4496421305860009126}
-  - component: {fileID: 1226814345124245843}
   - component: {fileID: 1435189680680890926}
+  - component: {fileID: 7964042662028890895}
   m_Layer: 5
   m_Name: Button_Tutorial
   m_TagString: Untagged
@@ -260,7 +260,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1226814345124245843}
+      - m_Target: {fileID: 7964042662028890895}
         m_TargetAssemblyTypeName: LoadSceneOnClick, Assembly-CSharp
         m_MethodName: LoadScene
         m_Mode: 1
@@ -293,19 +293,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 251.43431, y: 58.83782, z: 12.761183}
   m_Center: {x: -2.7008054, y: 0.15255249, z: -1.0716965}
---- !u!114 &1226814345124245843
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 216770667388200801}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e5a333a14d5e374a83d6b0a923f5456, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sceneToLoad: SampleScene
 --- !u!114 &1435189680680890926
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -323,7 +310,7 @@ MonoBehaviour:
   OnPointerClickEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1226814345124245843}
+      - m_Target: {fileID: 7964042662028890895}
         m_TargetAssemblyTypeName: LoadSceneOnClick, Assembly-CSharp
         m_MethodName: LoadScene
         m_Mode: 1
@@ -347,6 +334,19 @@ MonoBehaviour:
   OnPointerUpEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &7964042662028890895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 216770667388200801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e5a333a14d5e374a83d6b0a923f5456, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneToLoad: Tutorial
 --- !u!1 &1034642726426705685
 GameObject:
   m_ObjectHideFlags: 0
@@ -612,7 +612,6 @@ GameObject:
   - component: {fileID: 3054175282717068847}
   - component: {fileID: 2371555216278318777}
   - component: {fileID: 4305708906034789421}
-  - component: {fileID: 5296620170918686159}
   m_Layer: 5
   m_Name: Button_Level1
   m_TagString: Untagged
@@ -744,19 +743,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 250.06102, y: 59.35667, z: 15.29871}
   m_Center: {x: 1.3732909, y: -0.9307786, z: -6.48524}
---- !u!114 &5296620170918686159
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1827359127962420058}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e5a333a14d5e374a83d6b0a923f5456, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sceneToLoad: 
 --- !u!1 &1828029996992990744
 GameObject:
   m_ObjectHideFlags: 0
@@ -1209,7 +1195,6 @@ GameObject:
   - component: {fileID: 969433529929243403}
   - component: {fileID: 884135773362463400}
   - component: {fileID: 4599472177031562565}
-  - component: {fileID: 909522307536557658}
   m_Layer: 5
   m_Name: Button_Level2
   m_TagString: Untagged
@@ -1341,16 +1326,3 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 250.91551, y: 61.67594, z: 19.712515}
   m_Center: {x: -0.18310545, y: -0.16780569, z: -9.356256}
---- !u!114 &909522307536557658
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8485127295959855409}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e5a333a14d5e374a83d6b0a923f5456, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sceneToLoad: 
