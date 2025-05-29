@@ -38,6 +38,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Tutorial.unity
     guid: 5a2a15a5adab9664da08f340e73bbc19
+  - enabled: 1
+    path: Assets/Scenes/weaponPhysicsTest.unity
+    guid: 56dde15b6b3fc874288232ef6a9959a6
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: bfa1182bd221b4ca89619141f66f1260,
       type: 2}

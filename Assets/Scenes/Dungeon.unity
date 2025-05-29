@@ -18585,6 +18585,41 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 884135773362463400, guid: ef1c4f33cce0fc04f92ff4f68d5a3404,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 884135773362463400, guid: ef1c4f33cce0fc04f92ff4f68d5a3404,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 884135773362463400, guid: ef1c4f33cce0fc04f92ff4f68d5a3404,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 7905975317241592870}
+    - target: {fileID: 884135773362463400, guid: ef1c4f33cce0fc04f92ff4f68d5a3404,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 884135773362463400, guid: ef1c4f33cce0fc04f92ff4f68d5a3404,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 884135773362463400, guid: ef1c4f33cce0fc04f92ff4f68d5a3404,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: LoadSceneOnClick, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 884135773362463400, guid: ef1c4f33cce0fc04f92ff4f68d5a3404,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 1989901662161513392, guid: ef1c4f33cce0fc04f92ff4f68d5a3404,
         type: 3}
       propertyPath: m_Pivot.x
@@ -18698,8 +18733,71 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8485127295959855409, guid: ef1c4f33cce0fc04f92ff4f68d5a3404,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7905975317241592877}
   m_SourcePrefab: {fileID: 100100000, guid: ef1c4f33cce0fc04f92ff4f68d5a3404, type: 3}
+--- !u!1 &7905975317241592868 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8485127295959855409, guid: ef1c4f33cce0fc04f92ff4f68d5a3404,
+    type: 3}
+  m_PrefabInstance: {fileID: 7905975317241592867}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7905975317241592870 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 779421617939996595, guid: ef1c4f33cce0fc04f92ff4f68d5a3404,
+    type: 3}
+  m_PrefabInstance: {fileID: 7905975317241592867}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7905975317241592868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e5a333a14d5e374a83d6b0a923f5456, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7905975317241592877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7905975317241592868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 744b3611da944e54da5e532e02ae2454, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxDistance: 100
+  Enabled: 1
+  OnPointerClickEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7905975317241592870}
+        m_TargetAssemblyTypeName: LoadSceneOnClick, Assembly-CSharp
+        m_MethodName: LoadScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnPointerEnterEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  OnPointerExitEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  OnPointerDownEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  OnPointerUpEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
