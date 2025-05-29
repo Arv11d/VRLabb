@@ -15,6 +15,9 @@ public class FollowPlayerAgent : MonoBehaviour
     private bool isRagdolled = false;
     private float originalSpeed;
 
+    private float lastAttackTime = 0f;
+    public float attackCooldown = 1.5f;
+
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -51,12 +54,13 @@ public class FollowPlayerAgent : MonoBehaviour
         if (distanceToPlayer <= attackRange)
         {
             agent.speed = 0f;
-            agent.SetDestination(transform.position); 
+            agent.SetDestination(transform.position);
             animator.SetFloat("Speed", 0f);
 
-            if (!isAttacking)
+            if (!isAttacking && Time.time > lastAttackTime + attackCooldown)
             {
-                animator.SetTrigger("Attack");  
+                animator.SetTrigger("Attack");
+                lastAttackTime = Time.time;
             }
         }
         else
