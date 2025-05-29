@@ -9,6 +9,10 @@ public class RagdollActivator : MonoBehaviour
     public AudioClip hitSound;
     private NavMeshAgent agent;
     private bool AlreadyHit = false;
+
+    // Add this to disable custom AI scripts
+    public MonoBehaviour[] scriptsToDisable;
+
     void Awake()
     {
         allRigidbodies = GetComponentsInChildren<Rigidbody>();
@@ -34,7 +38,14 @@ public class RagdollActivator : MonoBehaviour
         if (agent != null)
             agent.enabled = !state;
 
-        if (state && hitSound != null && AlreadyHit == false)
+        // Disable any movement/AI scripts (e.g., FollowPlayer)
+        if (scriptsToDisable != null)
+        {
+            foreach (var script in scriptsToDisable)
+                script.enabled = !state;
+        }
+
+        if (state && hitSound != null && !AlreadyHit)
         {
             AudioSource.PlayClipAtPoint(hitSound, transform.position);
             AlreadyHit = true;

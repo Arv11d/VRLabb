@@ -10,6 +10,12 @@ TagManager:
   - Arrow
   - Weapon
   - WoodShield
+  - Anchor
+  - PlagueDoctor
+  - Bottle
+  - Enemy
+  - Hitbox
+  - EnemySword
   layers:
   - Default
   - TransparentFX
