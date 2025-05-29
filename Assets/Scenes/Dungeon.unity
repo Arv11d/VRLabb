@@ -2968,7 +2968,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0cbf5b625a05d94fade81bb24433445, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  voiceLine: {fileID: 8300000, guid: 622a2747a4dcbbe4db2e2f2b5ae6668b, type: 3}
+  voiceLine: {fileID: 8300000, guid: e83153132d2e358419a51f0abc29af8a, type: 3}
   npc: {fileID: 815817168}
   Tag: Weapon
   ReTriggable: 1
@@ -8769,7 +8769,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0cbf5b625a05d94fade81bb24433445, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  voiceLine: {fileID: 8300000, guid: b0fd4a78978aadd449e0bde076a03c2f, type: 3}
+  voiceLine: {fileID: 8300000, guid: 9217a315b804ac04080db0796cd93ebd, type: 3}
   npc: {fileID: 815817168}
   Tag: Player
   ReTriggable: 0
@@ -9094,7 +9094,7 @@ PrefabInstance:
     - target: {fileID: 6521157383258483309, guid: 3b3a577d35f83cd479e4139b02c51002,
         type: 3}
       propertyPath: m_Positions.Array.data[1].x
-      value: 0.000513785
+      value: 0.00051378505
       objectReference: {fileID: 0}
     - target: {fileID: 6521157383258483309, guid: 3b3a577d35f83cd479e4139b02c51002,
         type: 3}
@@ -9174,7 +9174,7 @@ PrefabInstance:
     - target: {fileID: 7387513612746779713, guid: 3b3a577d35f83cd479e4139b02c51002,
         type: 3}
       propertyPath: m_Positions.Array.data[1].x
-      value: 0.000513785
+      value: 0.00051378505
       objectReference: {fileID: 0}
     - target: {fileID: 7387513612746779713, guid: 3b3a577d35f83cd479e4139b02c51002,
         type: 3}
