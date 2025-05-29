@@ -561,7 +561,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.08235294, g: 0.5137255, b: 0.69803923, a: 0.77254903}
+  m_Color: {r: 0.08235294, g: 0.5137255, b: 0.69803923, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1202,10 +1202,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\nTutorial\n\r\n1. Move around with the -left joystick-\r\n\r\n2. Grab
-    weapons and items by pressing -?-\r\n\r\n3. Swing your weapon and defeat all
-    enemies \r\nto complete the level\r\n\r\n4. Pull the lever to start the tutorial!\n\n5.
-    Head to the door behind you to go back to camp\r\n"
+  m_text: "Tutorial\n\r\n1. Move around with the -left joystick-\r\n\r\n2. Grab weapons
+    and items by pressing -?-\r\n\r\n3. Swing your weapon and defeat all enemies
+    \r\nto complete the level\n\n4. You die upon taking 3 hits\r\n\r\n5. Pull the
+    lever to start the tutorial!\n\n- Head to the door  to go back to camp\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1322,7 +1322,7 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1001 &254127197
 PrefabInstance:
