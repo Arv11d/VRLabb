@@ -1,19 +1,18 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class SceneTriggerLoader : MonoBehaviour
+public class ReturnToDungeon : MonoBehaviour
 {
-    public string sceneToLoad = "Dungeon"; 
-    
+    public string sceneToLoad = "Dungeon";
 
-    
+
+
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            GameSessionData.IsDungeonButtonUnlocked = true;
-            GameSessionData.HasPlayedDungeonVoiceLine = true;
+            GameSessionData.IsDungeonButtonUnlocked2 = true;
             SceneManager.LoadScene(sceneToLoad);
         }
     }

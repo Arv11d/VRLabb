@@ -29,7 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Dungeon.unity
     guid: 35ec297235548144fac801076e7b2e3f
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Arena.unity
     guid: 19fea6ddbf81bf94d8de08899f9d2cd1
   - enabled: 0
@@ -38,9 +38,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Tutorial.unity
     guid: 5a2a15a5adab9664da08f340e73bbc19
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/weaponPhysicsTest.unity
     guid: 56dde15b6b3fc874288232ef6a9959a6
+  - enabled: 1
+    path: Assets/Scenes/KingndomArena.unity
+    guid: c75a5619a77f8d040bcb8acd303bef06
+  - enabled: 1
+    path: Assets/Scenes/KingndomArena2.unity
+    guid: d578fe23c1a17704c9fc2a82a0a31832
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: bfa1182bd221b4ca89619141f66f1260,
       type: 2}

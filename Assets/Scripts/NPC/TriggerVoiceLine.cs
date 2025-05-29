@@ -6,12 +6,16 @@ public class TriggerVoiceLine : MonoBehaviour
     public GameObject npc;
     public string Tag;
     public bool ReTriggable;
+    public bool useDungeonFlag = false;
 
     private bool hasBeenTriggered = false;
 
     private void OnTriggerEnter(Collider other)
     {
         if (hasBeenTriggered || VoiceLineManager.Instance.IsPlaying()) return;
+
+        if (useDungeonFlag && GameSessionData.HasPlayedDungeonVoiceLine)
+            return;
 
         if (other.CompareTag(Tag))
         {
@@ -23,6 +27,9 @@ public class TriggerVoiceLine : MonoBehaviour
                 {
                     if (!ReTriggable)
                         hasBeenTriggered = true;
+
+                    if (useDungeonFlag)
+                        GameSessionData.HasPlayedDungeonVoiceLine = true;
                 });
             }
         }

@@ -784,7 +784,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e5a333a14d5e374a83d6b0a923f5456, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: weaponPhysicsTest
+  sceneToLoad: KingndomArena
 --- !u!114 &4819873285142418325
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -798,7 +798,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxDistance: 100
-  Enabled: 1
+  Enabled: 0
   OnPointerClickEvent:
     m_PersistentCalls:
       m_Calls:
@@ -1279,6 +1279,8 @@ GameObject:
   - component: {fileID: 884135773362463400}
   - component: {fileID: 4599472177031562565}
   - component: {fileID: 779421617939996595}
+  - component: {fileID: 1259056278970230418}
+  - component: {fileID: 8147514854421220240}
   m_Layer: 5
   m_Name: Button_Level2
   m_TagString: Untagged
@@ -1388,7 +1390,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 969433529929243403}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 779421617939996595}
+        m_TargetAssemblyTypeName: LoadSceneOnClick, Assembly-CSharp
+        m_MethodName: LoadScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &4599472177031562565
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1422,4 +1436,59 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e5a333a14d5e374a83d6b0a923f5456, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: 
+  sceneToLoad: KingndomArena2
+--- !u!114 &1259056278970230418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8485127295959855409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 744b3611da944e54da5e532e02ae2454, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxDistance: 100
+  Enabled: 1
+  OnPointerClickEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 779421617939996595}
+        m_TargetAssemblyTypeName: LoadSceneOnClick, Assembly-CSharp
+        m_MethodName: LoadScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnPointerEnterEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  OnPointerExitEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  OnPointerDownEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  OnPointerUpEvent:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &8147514854421220240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8485127295959855409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b91b7b622f0ed1745b46bcf9e83ac8af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonToUnlock: {fileID: 884135773362463400}
+  lockObject: {fileID: 1653217758783542915}
