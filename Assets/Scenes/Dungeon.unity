@@ -12471,7 +12471,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0cbf5b625a05d94fade81bb24433445, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  voiceLine: {fileID: 8300000, guid: d8b95808a3e2f0e4c81ca2a1a1391dd3, type: 3}
+  voiceLine: {fileID: 8300000, guid: cb69e6cf21a3a654e85fcac9dcdafad8, type: 3}
   npc: {fileID: 815817168}
   Tag: Player
   ReTriggable: 0
