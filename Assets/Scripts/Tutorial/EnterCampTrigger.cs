@@ -6,7 +6,7 @@ public class SceneTriggerLoader : MonoBehaviour
     public string sceneToLoad = "Dungeon"; 
     
 
-    private bool hasLoaded = false;
+    
 
     private void OnTriggerEnter(Collider other)
     {
