@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 3890080553629016415}
   m_Layer: 0
   m_Name: EnemyWithSword
-  m_TagString: Untagged
+  m_TagString: Hitbox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2219,6 +2219,11 @@ MonoBehaviour:
   animator: {fileID: 4674646772504864891}
   attackStateName: MeleeAttack_OneHanden
   attackRange: 2
+  retreatDistance: 4
+  retreatDuration: 1.5
+  retreatSpeed: 3
+  attackToRetreatDelay: 0.5
+  attackCooldown: 1.5
 --- !u!136 &7257574085755419162
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2254,9 +2259,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 818763608c6c2c04582ba252cf54aa64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 100
   animator: {fileID: 4674646772504864891}
   hitSound: {fileID: 8300000, guid: 0dece9f246b95da4c88d776768af4888, type: 3}
+  deathSound: {fileID: 0}
   scriptsToDisable: []
+  gameManager: {fileID: 0}
+  pointsToAdd: 1
 --- !u!135 &5800087158314738805
 SphereCollider:
   m_ObjectHideFlags: 0
