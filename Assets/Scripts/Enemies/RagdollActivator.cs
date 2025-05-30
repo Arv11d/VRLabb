@@ -10,8 +10,10 @@ public class RagdollActivator : MonoBehaviour
     private NavMeshAgent agent;
     private bool AlreadyHit = false;
 
-    // Add this to disable custom AI scripts
     public MonoBehaviour[] scriptsToDisable;
+
+    public GameManager gameManager;
+    public int pointsToAdd = 1;
 
     void Awake()
     {
@@ -19,7 +21,7 @@ public class RagdollActivator : MonoBehaviour
         allColliders = GetComponentsInChildren<Collider>();
         agent = GetComponent<NavMeshAgent>();
 
-        SetRagdoll(false); // Start with ragdoll off
+        SetRagdoll(false);
     }
 
     public void SetRagdoll(bool state)
@@ -38,17 +40,23 @@ public class RagdollActivator : MonoBehaviour
         if (agent != null)
             agent.enabled = !state;
 
-        // Disable any movement/AI scripts (e.g., FollowPlayer)
         if (scriptsToDisable != null)
         {
             foreach (var script in scriptsToDisable)
                 script.enabled = !state;
         }
 
-        if (state && hitSound != null && !AlreadyHit)
+        if (state && !AlreadyHit)
         {
-            AudioSource.PlayClipAtPoint(hitSound, transform.position);
             AlreadyHit = true;
+
+            if (hitSound != null)
+                AudioSource.PlayClipAtPoint(hitSound, transform.position);
+
+            if (gameManager != null)
+                gameManager.AddPoints(pointsToAdd);
+            else
+                Debug.LogWarning("GameManager not assigned in RagdollActivator!");
         }
     }
 }
