@@ -2,36 +2,52 @@ using UnityEngine;
 
 public class ArrowHitDetector : MonoBehaviour
 {
-    public float forceMultiplier = 10f; // Tune this to get the right knockback amount
-    public float minImpactVelocity = 0.2f; // Minimum velocity to register a valid hit
+    [Header("Force Settings")]
+    public float forceMultiplier = 10f;
+    public float minImpactVelocity = 0.2f;
+    
+    [Header("Damage Settings")]
+    public float baseDamage = 50f;
+    public float velocityDamageMultiplier = 20f;
+    public float maxDamage = 150f;
 
     private void OnTriggerEnter(Collider other)
     {
-        if (!other.CompareTag("Hitbox"))
+        if (!other.CompareTag("Hitbox") && !other.CompareTag("Enemy"))
             return;
 
-        // Try to get the RagdollActivator
         RagdollActivator ragdoll = other.GetComponentInParent<RagdollActivator>();
-        if (ragdoll == null)
+        if (ragdoll == null || ragdoll.IsDead())
             return;
-
-        ragdoll.SetRagdoll(true);
 
         Rigidbody hitBody = other.attachedRigidbody;
-        Rigidbody incomingRigidbody = GetComponentInParent<Rigidbody>(); // The object doing the hitting
+        Rigidbody incomingRigidbody = GetComponentInParent<Rigidbody>();
 
-        if (hitBody != null && incomingRigidbody != null)
+        if (incomingRigidbody == null)
+            return;
+
+        Vector3 velocity = incomingRigidbody.linearVelocity;
+        float currentVelocity = velocity.magnitude;
+
+        if (currentVelocity < minImpactVelocity)
+            return;
+
+        float velocityDamage = currentVelocity * velocityDamageMultiplier;
+        float totalDamage = Mathf.Clamp(baseDamage + velocityDamage, baseDamage, maxDamage);
+
+        Debug.Log($"ARROW DAMAGE: {totalDamage:F2} | Health before: {ragdoll.GetCurrentHealth():F2}");
+        
+        ragdoll.TakeDamage(totalDamage);
+
+        Debug.Log($"Health after: {ragdoll.GetCurrentHealth():F2}");
+
+        if (ragdoll.IsDead() && hitBody != null)
         {
-            Vector3 velocity = incomingRigidbody.linearVelocity;
+            Vector3 forceDirection = hitBody.transform.position - transform.position;
+            forceDirection.Normalize();
 
-            if (velocity.magnitude > minImpactVelocity)
-            {
-                Vector3 forceDirection = hitBody.transform.position - transform.position;
-                forceDirection.Normalize();
-
-                float impactForce = velocity.magnitude * forceMultiplier;
-                hitBody.AddForce(forceDirection * impactForce, ForceMode.Impulse);
-            }
+            float impactForce = currentVelocity * forceMultiplier;
+            hitBody.AddForce(forceDirection * impactForce, ForceMode.Impulse);
         }
     }
 }
