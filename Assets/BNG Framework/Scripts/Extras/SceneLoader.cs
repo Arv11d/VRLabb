@@ -17,7 +17,7 @@ namespace BNG {
 
         ScreenFader sf;
 
-        private string _loadSceneName = string.Empty;
+        public string _loadSceneName;
 
         public void LoadScene(string SceneName) {
 

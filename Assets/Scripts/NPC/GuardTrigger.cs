@@ -8,11 +8,13 @@ public class GuardTrigger : MonoBehaviour
     public GuardScript backleftGuard;
     public GuardScript backrightGuard;
     public GuardScript rightGuard;
-
+    public BoxCollider enableExitTrigger;
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
+            if (enableExitTrigger != null)
+                enableExitTrigger.isTrigger = true;
             if (leftGuard != null) leftGuard.TriggerBlock();
             if (rightGuard != null) rightGuard.TriggerBlock();
             if (backrightGuard != null) backrightGuard.TriggerBlock();
