@@ -4015,6 +4015,7 @@ MonoBehaviour:
   Tag: Weapon
   ReTriggable: 1
   useDungeonFlag: 0
+  useReturnFlag: 0
 --- !u!136 &497284413
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -7241,6 +7242,7 @@ Transform:
   m_Children:
   - {fileID: 1074678853}
   - {fileID: 1548571648}
+  - {fileID: 1734653043}
   - {fileID: 497284411}
   m_Father: {fileID: 891277310}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -10861,6 +10863,7 @@ MonoBehaviour:
   Tag: Player
   ReTriggable: 0
   useDungeonFlag: 0
+  useReturnFlag: 0
 --- !u!65 &1074678855
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11270,7 +11273,7 @@ PrefabInstance:
     - target: {fileID: 6521157383258483309, guid: 3b3a577d35f83cd479e4139b02c51002,
         type: 3}
       propertyPath: m_Positions.Array.data[1].x
-      value: 0.000513785
+      value: 0.00051378505
       objectReference: {fileID: 0}
     - target: {fileID: 6521157383258483309, guid: 3b3a577d35f83cd479e4139b02c51002,
         type: 3}
@@ -11350,7 +11353,7 @@ PrefabInstance:
     - target: {fileID: 7387513612746779713, guid: 3b3a577d35f83cd479e4139b02c51002,
         type: 3}
       propertyPath: m_Positions.Array.data[1].x
-      value: 0.000513785
+      value: 0.00051378505
       objectReference: {fileID: 0}
     - target: {fileID: 7387513612746779713, guid: 3b3a577d35f83cd479e4139b02c51002,
         type: 3}
@@ -16031,6 +16034,7 @@ MonoBehaviour:
   Tag: Player
   ReTriggable: 0
   useDungeonFlag: 1
+  useReturnFlag: 0
 --- !u!65 &1548571650
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17737,6 +17741,78 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 831533214}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1734653042
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1734653043}
+  - component: {fileID: 1734653045}
+  - component: {fileID: 1734653044}
+  m_Layer: 0
+  m_Name: ReturnTalk
+  m_TagString: Player
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1734653043
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1734653042}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.047, y: 0, z: -0.241}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 815817169}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1734653044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1734653042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0cbf5b625a05d94fade81bb24433445, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  voiceLine: {fileID: 8300000, guid: 75ea2754b077d974bae4321a2b319def, type: 3}
+  npc: {fileID: 815817168}
+  Tag: Player
+  ReTriggable: 1
+  useDungeonFlag: 0
+  useReturnFlag: 1
+--- !u!65 &1734653045
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1734653042}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.9899092, y: 3.2471285, z: 0.5688367}
+  m_Center: {x: 0.28102446, y: 1.1235647, z: 3.3072298}
 --- !u!4 &1736590813 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7516147023265246560, guid: 9122802f90381f84d8b8a93daaf9717a,

@@ -7,6 +7,7 @@ public class TriggerVoiceLine : MonoBehaviour
     public string Tag;
     public bool ReTriggable;
     public bool useDungeonFlag = false;
+    public bool useReturnFlag = false;
 
     private bool hasBeenTriggered = false;
 
@@ -14,7 +15,8 @@ public class TriggerVoiceLine : MonoBehaviour
     {
         if (hasBeenTriggered || VoiceLineManager.Instance.IsPlaying()) return;
 
-        if (useDungeonFlag && GameSessionData.HasPlayedDungeonVoiceLine)
+        if ((useDungeonFlag && GameSessionData.HasPlayedDungeonVoiceLine) ||
+            (useReturnFlag && GameSessionData.HasPlayedReturnVoiceLine))
             return;
 
         if (other.CompareTag(Tag))
@@ -30,6 +32,9 @@ public class TriggerVoiceLine : MonoBehaviour
 
                     if (useDungeonFlag)
                         GameSessionData.HasPlayedDungeonVoiceLine = true;
+
+                    if (useReturnFlag)
+                        GameSessionData.HasPlayedReturnVoiceLine = true;
                 });
             }
         }
