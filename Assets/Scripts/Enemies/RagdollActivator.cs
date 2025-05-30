@@ -22,7 +22,6 @@ public class RagdollActivator : MonoBehaviour
     public MonoBehaviour[] scriptsToDisable;
 
     [Header("Game Management")]
-
     public GameManager gameManager;
     public int pointsToAdd = 1;
 
@@ -90,15 +89,11 @@ public class RagdollActivator : MonoBehaviour
         if (agent != null)
             agent.enabled = !state;
 
-        if (obstacle != null)
-            obstacle.enabled = state; 
-
         if (scriptsToDisable != null)
         {
             foreach (var script in scriptsToDisable)
                 script.enabled = !state;
         }
-
     }
     
     public float GetHealthPercentage()
