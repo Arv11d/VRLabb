@@ -8,10 +8,10 @@ public class RagdollActivator : MonoBehaviour
     private Collider[] allColliders;
     public AudioClip hitSound;
     private NavMeshAgent agent;
+    private NavMeshObstacle obstacle;
     private bool AlreadyHit = false;
 
     public MonoBehaviour[] scriptsToDisable;
-
     public GameManager gameManager;
     public int pointsToAdd = 1;
 
@@ -20,6 +20,7 @@ public class RagdollActivator : MonoBehaviour
         allRigidbodies = GetComponentsInChildren<Rigidbody>();
         allColliders = GetComponentsInChildren<Collider>();
         agent = GetComponent<NavMeshAgent>();
+        obstacle = GetComponent<NavMeshObstacle>();
 
         SetRagdoll(false);
     }
@@ -40,6 +41,9 @@ public class RagdollActivator : MonoBehaviour
         if (agent != null)
             agent.enabled = !state;
 
+        if (obstacle != null)
+            obstacle.enabled = state; 
+
         if (scriptsToDisable != null)
         {
             foreach (var script in scriptsToDisable)
@@ -55,8 +59,6 @@ public class RagdollActivator : MonoBehaviour
 
             if (gameManager != null)
                 gameManager.AddPoints(pointsToAdd);
-            else
-                Debug.LogWarning("GameManager not assigned in RagdollActivator!");
         }
     }
 }
