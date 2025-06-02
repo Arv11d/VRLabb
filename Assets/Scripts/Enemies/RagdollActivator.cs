@@ -16,7 +16,7 @@ public class RagdollActivator : MonoBehaviour
     private Rigidbody[] allRigidbodies;
     private Collider[] allColliders;
     private NavMeshAgent agent;
-    private bool isDead = false;
+    public bool isDead = false;
 
     [Header("Scripts to Disable")]
     public MonoBehaviour[] scriptsToDisable;
