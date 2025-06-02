@@ -11451,7 +11451,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 1795718313}
   spawnPoint: {fileID: 668805620}
-  enemyLimit: 2
+  enemyLimit: 3
 --- !u!114 &668805622
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11466,7 +11466,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 1820013058}
   spawnPoint: {fileID: 668805620}
-  enemyLimit: 3
+  enemyLimit: 4
 --- !u!114 &668805623
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21533,7 +21533,7 @@ PrefabInstance:
     - target: {fileID: 2101666176097190955, guid: aff59c8dfce4abc4ca8c2cefeb583395,
         type: 3}
       propertyPath: maxHP
-      value: 3
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2101666176097190955, guid: aff59c8dfce4abc4ca8c2cefeb583395,
         type: 3}

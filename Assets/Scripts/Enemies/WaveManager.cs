@@ -1,11 +1,18 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class WaveManager : MonoBehaviour
 {
     public GameObject enemyPrefab;
     public Transform spawnPoint;
-    public int enemyLimit = 10;
+
+    public int enemisPerWave = 10;
+    public int totalWaves = 5;
+    public int currentWave = 0;
+
+    private List<RagdollActivator> currentWaveEnemies = new List<RagdollActivator>();
+
 
     private int enemyCounter = 0;
     private GameObject currentEnemy;
@@ -16,22 +23,46 @@ public class WaveManager : MonoBehaviour
         StartCoroutine(SpawnEnemies());
     }
 
+    private void Update()
+    {
+
+    }
     // Update is called once per frame
     private IEnumerator SpawnEnemies()
     {
-        while (enemyCounter < enemyLimit)
+        while (currentWave < totalWaves)
         {
-            
-            currentEnemy = Instantiate(enemyPrefab, spawnPoint.position, Quaternion.identity);
-            enemyCounter++;
-
-            RagdollActivator controller = currentEnemy.GetComponent<RagdollActivator>();
-
-            while (controller != null && !controller.isDead)
+            currentWaveEnemies.Clear();
+            for (int i = 0; i < enemisPerWave; i++)
             {
-                yield return null;
+                GameObject enemy = Instantiate(enemyPrefab, spawnPoint.position, Quaternion.identity);
+                RagdollActivator controller = enemy.GetComponentInChildren<RagdollActivator>();
+
+                if (controller == null)
+                {
+                    Debug.LogError("Enemy missing RagdollActivator!");
+                }
+                else
+                {
+                    currentWaveEnemies.Add(controller);
+                    Debug.Log($"Spawned enemy {i + 1}");
+                }
             }
-            yield return new WaitForSeconds(1);
+            currentWave++;
+
+            yield return new WaitUntil(() => AllEnemiesDead());
+
+            yield return new WaitForSeconds(2f);
+
         }
+    }
+    private bool AllEnemiesDead()
+    {
+        foreach(var enemy in  currentWaveEnemies)
+        {
+            if (enemy != null && !enemy.isDead)
+                return false;
+        }
+        return true;
     }
 }
