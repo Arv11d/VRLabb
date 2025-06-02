@@ -41,13 +41,13 @@ public class WaveManager : MonoBehaviour
             }
             currentWave++;
 
-            yield return new WaitUntil(() => AllEnemiesDead());
+            yield return new WaitUntil(() => AllEnemiesRagdolled());
 
             yield return new WaitForSeconds(2f);
 
         }
     }
-    private bool AllEnemiesDead()
+    private bool AllEnemiesRagdolled()
     {
         foreach(var enemy in  currentWaveEnemies)
         {
