@@ -12,16 +12,16 @@ public class HPSystem : MonoBehaviour
     [Header("Audio")]
     public AudioSource damageSound;
 
-    [Header("Vignette UI")]
-    public Image vignetteImage;
-    public Color damageColor = Color.red;
-    public Color deathColor = new Color(0, 0, 0, 0.8f);
+    [Header("UI Elements")]
+    public Image damageFlashImage;
+    public Image deathScreenImage; // Set this to a black image with 0 alpha in the editor
 
-    [Header("Damage Vignette Settings")]
+    [Header("Damage Flash Settings")]
+    public Color damageColor = Color.red;
     public float damageFadeInDuration = 0.2f;
     public float damageFadeOutDuration = 0.3f;
 
-    [Header("Death Vignette Settings")]
+    [Header("Death Screen Settings")]
     public float deathFadeDuration = 2f;
 
     [Header("Other Settings")]
@@ -33,8 +33,16 @@ public class HPSystem : MonoBehaviour
     void Start()
     {
         currentHP = maxHP;
-        if (vignetteImage != null)
-            vignetteImage.color = Color.clear;
+
+        if (damageFlashImage != null)
+            damageFlashImage.color = Color.clear;
+
+        if (deathScreenImage != null)
+        {
+            Color c = deathScreenImage.color;
+            c.a = 0f;
+            deathScreenImage.color = c;
+        }
     }
 
     void OnTriggerEnter(Collider other)
@@ -62,7 +70,7 @@ public class HPSystem : MonoBehaviour
             if (damageSound != null)
                 damageSound.Play();
 
-            if (vignetteImage != null)
+            if (damageFlashImage != null)
                 StartCoroutine(FlashVignette(damageColor, damageFadeInDuration, damageFadeOutDuration));
         }
     }
@@ -77,8 +85,8 @@ public class HPSystem : MonoBehaviour
         if (damageSound != null)
             damageSound.Play();
 
-        if (vignetteImage != null)
-            StartCoroutine(FadeToColor(deathColor, deathFadeDuration));
+        if (deathScreenImage != null)
+            StartCoroutine(FadeInDeathScreen(deathFadeDuration));
 
         Invoke(nameof(LoadGameOverScene), deathFadeDuration + 1f);
     }
@@ -90,41 +98,42 @@ public class HPSystem : MonoBehaviour
 
     IEnumerator FlashVignette(Color color, float fadeInDuration, float fadeOutDuration)
     {
-        // Fade in
         float time = 0f;
         while (time < fadeInDuration)
         {
             float t = time / fadeInDuration;
-            vignetteImage.color = Color.Lerp(Color.clear, color, t);
+            damageFlashImage.color = Color.Lerp(Color.clear, color, t);
             time += Time.deltaTime;
             yield return null;
         }
-        vignetteImage.color = color;
+        damageFlashImage.color = color;
 
-        // Fade out
         time = 0f;
         while (time < fadeOutDuration)
         {
             float t = time / fadeOutDuration;
-            vignetteImage.color = Color.Lerp(color, Color.clear, t);
+            damageFlashImage.color = Color.Lerp(color, Color.clear, t);
             time += Time.deltaTime;
             yield return null;
         }
-        vignetteImage.color = Color.clear;
+        damageFlashImage.color = Color.clear;
     }
 
-    IEnumerator FadeToColor(Color targetColor, float duration)
+    IEnumerator FadeInDeathScreen(float duration)
     {
-        Color startColor = vignetteImage.color;
         float time = 0f;
+        Color color = deathScreenImage.color;
 
         while (time < duration)
         {
-            vignetteImage.color = Color.Lerp(startColor, targetColor, time / duration);
+            float alpha = Mathf.Lerp(0f, 1f, time / duration);
+            color.a = alpha;
+            deathScreenImage.color = color;
             time += Time.deltaTime;
             yield return null;
         }
 
-        vignetteImage.color = targetColor;
+        color.a = 1f;
+        deathScreenImage.color = color;
     }
 }
