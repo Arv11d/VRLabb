@@ -9,11 +9,11 @@ public class WaveManager : MonoBehaviour
 
     Vector3 SpawnPos;
 
-    public int enemisPerWave = 10;
+    public int enemiesPerWave = 10;
     public int totalWaves = 5;
     public int currentWave = 0;
 
-    private List<RagdollActivator> currentWaveEnemies = new List<RagdollActivator>();
+    private List<RagdollActivator> currentWaveEnemies = new();
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -29,7 +29,7 @@ public class WaveManager : MonoBehaviour
         while (currentWave < totalWaves)
         {
             currentWaveEnemies.Clear();
-            for (int i = 0; i < enemisPerWave; i++)
+            for (int i = 0; i < enemiesPerWave; i++)
             {
                 Vector3 offset = new Vector3(Random.Range(0, 10), 0, Random.Range(0, 10));
                 Vector3 spawnPos = spawnPoint.position + offset;
@@ -47,7 +47,7 @@ public class WaveManager : MonoBehaviour
                     Debug.Log($"Spawned enemy {i + 1}");
                 }
             }
-            currentWave++;
+            
 
             yield return new WaitUntil(() => AllEnemiesRagdolled());
 
@@ -62,6 +62,7 @@ public class WaveManager : MonoBehaviour
             if (enemy != null && !enemy.isDead)
                 return false;
         }
+        currentWave++;
         return true;
     }
 }
