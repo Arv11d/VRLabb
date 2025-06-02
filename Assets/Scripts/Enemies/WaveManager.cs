@@ -18,6 +18,11 @@ public class WaveManager : MonoBehaviour
     {
         StartCoroutine(SpawnEnemies());
     }
+
+    private void Update()
+    {
+        SpawnEnemies();
+    }
     private IEnumerator SpawnEnemies()
     {
         while (currentWave < totalWaves)
