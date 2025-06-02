@@ -21,17 +21,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: fc43cb050710c3a4fbb6fe51f076e1df,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.4
+      value: -3.9358082
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fc43cb050710c3a4fbb6fe51f076e1df,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.028
+      value: 0.10721731
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fc43cb050710c3a4fbb6fe51f076e1df,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.18
+      value: -3.639204
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fc43cb050710c3a4fbb6fe51f076e1df,
         type: 3}
@@ -41,17 +41,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: fc43cb050710c3a4fbb6fe51f076e1df,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fc43cb050710c3a4fbb6fe51f076e1df,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fc43cb050710c3a4fbb6fe51f076e1df,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fc43cb050710c3a4fbb6fe51f076e1df,
         type: 3}
@@ -765,6 +765,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 3891572383663412832}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: fc43cb050710c3a4fbb6fe51f076e1df,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3148967987044351466}
     - targetCorrespondingSourceObject: {fileID: 5071521132271674547, guid: fc43cb050710c3a4fbb6fe51f076e1df,
         type: 3}
       insertIndex: -1
@@ -1792,9 +1796,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1837f2502c48a644b80c9654453deba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
+  animator: {fileID: 3734473038619873108}
   attackStateName: Throw
   attackRange: 10
+  retreatDistance: 0
+  retreatDuration: 0
+  retreatSpeed: 0
+  attackToRetreatDelay: 0
+  attackCooldown: 1.5
 --- !u!195 &3891572383663412832
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1817,6 +1826,22 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!208 &3148967987044351466
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3950395678940775345}
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Shape: 0
+  m_Extents: {x: 0.2, y: 1, z: 0.2}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0.92, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!4 &4070735024352023298 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -9048345390860751390, guid: fc43cb050710c3a4fbb6fe51f076e1df,
@@ -2471,7 +2496,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c656a8f645b7e545863535ba2bdd712, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  throwingLogic: {fileID: 0}
+  throwingLogic: {fileID: 612710969491624398}
 --- !u!114 &5683832009552035134
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2521,10 +2546,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 818763608c6c2c04582ba252cf54aa64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 100
   animator: {fileID: 3734473038619873108}
   hitSound: {fileID: 8300000, guid: 0dece9f246b95da4c88d776768af4888, type: 3}
+  deathSound: {fileID: 0}
+  isDead: 0
   scriptsToDisable:
   - {fileID: 6776160374889156998}
+  gameManager: {fileID: 0}
+  pointsToAdd: 1
 --- !u!4 &9089814301105225497 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4915247791747990009, guid: fc43cb050710c3a4fbb6fe51f076e1df,
