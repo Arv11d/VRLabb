@@ -31,7 +31,7 @@ public class WaveManager : MonoBehaviour
             currentWaveEnemies.Clear();
             for (int i = 0; i < enemisPerWave; i++)
             {
-                Vector3 offset = new Vector3(Random.Range(-2f, 2f), 0, Random.Range(-2f, 2f));
+                Vector3 offset = new Vector3(Random.Range(0, 10), 0, Random.Range(0, 10));
                 Vector3 spawnPos = spawnPoint.position + offset;
 
                 GameObject enemy = Instantiate(enemyPrefab, spawnPos, Quaternion.identity);
