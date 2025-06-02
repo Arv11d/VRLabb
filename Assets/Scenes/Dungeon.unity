@@ -21959,11 +21959,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1445089961}
     m_Modifications:
-    - target: {fileID: 291727802018545409, guid: 753e47fd4eff2c047ba20f13af0d826b,
-        type: 3}
-      propertyPath: CollisionAudio
-      value: 
-      objectReference: {fileID: 8300000, guid: 0782952c0b3326440a045a810370f17e, type: 3}
     - target: {fileID: 2180165473151711004, guid: 753e47fd4eff2c047ba20f13af0d826b,
         type: 3}
       propertyPath: m_Name

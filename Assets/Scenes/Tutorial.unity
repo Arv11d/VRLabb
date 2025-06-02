@@ -18678,8 +18678,18 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1392692202545257908, guid: 3e3b6906493c65241960138484f9f85e,
         type: 3}
+      propertyPath: m_Positions.Array.data[1].x
+      value: 0.00051378505
+      objectReference: {fileID: 0}
+    - target: {fileID: 1392692202545257908, guid: 3e3b6906493c65241960138484f9f85e,
+        type: 3}
       propertyPath: m_Positions.Array.data[1].z
       value: 0.004651994
+      objectReference: {fileID: 0}
+    - target: {fileID: 3823873492914141118, guid: 3e3b6906493c65241960138484f9f85e,
+        type: 3}
+      propertyPath: m_Positions.Array.data[1].x
+      value: 0.00051378505
       objectReference: {fileID: 0}
     - target: {fileID: 3823873492914141118, guid: 3e3b6906493c65241960138484f9f85e,
         type: 3}

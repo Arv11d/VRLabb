@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 291727802018545409}
   - component: {fileID: 5883736154008643038}
   - component: {fileID: 4567421145848822375}
+  - component: {fileID: 8166445926378969823}
   m_Layer: 0
   m_Name: HammerSmall.003
   m_TagString: Weapon
@@ -267,6 +268,18 @@ MonoBehaviour:
   minVelocityForDamage: 2.5
   velocityDamageMultiplier: 4
   maxDamage: 100
+--- !u!114 &8166445926378969823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2180165473151711004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3bf40a46cc2bb547961b6ec72c5e65c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3801847532282630686
 GameObject:
   m_ObjectHideFlags: 0
