@@ -4,6 +4,7 @@ using UnityEngine;
 public class WaveManager : MonoBehaviour
 {
     public GameObject enemyPrefab;
+    public Transform spawnPoint;
     public int enemyLimit = 10;
 
     private int enemyCounter = 0;
@@ -20,8 +21,8 @@ public class WaveManager : MonoBehaviour
     {
         while (enemyCounter < enemyLimit)
         {
-            Vector3 spawnPos = new Vector3(Random.Range(0, 4), -4, Random.Range(0, 4));
-            currentEnemy = Instantiate(enemyPrefab, spawnPos, Quaternion.identity);
+            
+            currentEnemy = Instantiate(enemyPrefab, spawnPoint.position, Quaternion.identity);
             enemyCounter++;
 
             RagdollActivator controller = currentEnemy.GetComponent<RagdollActivator>();
