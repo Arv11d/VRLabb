@@ -4161,31 +4161,27 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Tutorial
+  m_text: '
 
+    Tutorial
 
 
     1. Move around with the -left joystick-
 
 
-
-    2. Grab
-    weapons and items by pressing gripbutton
-
+    2.
+    Grab weapons and items by pressing gripbutton
 
 
     3. Swing your weapon or shoot
-    the bow and defeat all enemies to complete the level
+    the bow and defeat all enemies and walk through the gate to complete the level
 
 
-    4. You die upon taking
-    3 hits
+    4.
+    You die upon taking 3 hits
 
 
-
-    5. Pull the lever to start the tutorial!
-
-'
+    5. Pull the lever to start the tutorial! '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
