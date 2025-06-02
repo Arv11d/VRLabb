@@ -18,7 +18,6 @@ public class WaveManager : MonoBehaviour
     {
         StartCoroutine(SpawnEnemies());
     }
-    // Update is called once per frame
     private IEnumerator SpawnEnemies()
     {
         while (currentWave < totalWaves)
@@ -27,7 +26,7 @@ public class WaveManager : MonoBehaviour
             for (int i = 0; i < enemisPerWave; i++)
             {
                 GameObject enemy = Instantiate(enemyPrefab, spawnPoint.position, Quaternion.identity);
-                RagdollActivator controller = enemy.GetComponent<RagdollActivator>();
+                RagdollActivator controller = enemy.GetComponentInChildren<RagdollActivator>();
 
                 if (controller == null)
                 {
