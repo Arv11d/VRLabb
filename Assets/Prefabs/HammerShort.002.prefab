@@ -81,6 +81,7 @@ GameObject:
   - component: {fileID: 1284242126563787074}
   - component: {fileID: 15330783238212498}
   - component: {fileID: 2595917335653298051}
+  - component: {fileID: 5288686856989996811}
   m_Layer: 0
   m_Name: HammerShort.002
   m_TagString: Weapon
@@ -314,3 +315,20 @@ MonoBehaviour:
   MaximumVolume: 1
   RecentlyPlayedSound: 0
   LastRelativeVelocity: 0
+--- !u!114 &5288686856989996811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7993617174914361447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae0afc2364d68b446a30f0358cd62d75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitForce: 200
+  baseDamage: 25
+  minVelocityForDamage: 2.5
+  velocityDamageMultiplier: 4
+  maxDamage: 100

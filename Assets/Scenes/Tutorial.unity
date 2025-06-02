@@ -4088,25 +4088,25 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Tutorial
 
-    
+
 
     1. Move around with the -left joystick-
 
-    
-
-    2.
-    Grab weapons and items by pressing gripbutton
-
-    
-
-    3. Swing your weapon
-    or shoot the bow and defeat all enemies to complete the level
 
 
-    4. You die
-    upon taking 3 hits
+    2. Grab
+    weapons and items by pressing gripbutton
 
-    
+
+
+    3. Swing your weapon or shoot
+    the bow and defeat all enemies to complete the level
+
+
+    4. You die upon taking
+    3 hits
+
+
 
     5. Pull the lever to start the tutorial!
 
