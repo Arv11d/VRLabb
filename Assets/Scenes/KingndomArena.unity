@@ -23053,10 +23053,14 @@ AudioSource:
   m_Resource: {fileID: 8300000, guid: e73a361998c596945a61e2d6f8048759, type: 3}
   m_PlayOnAwake: 1
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_Volume: 0.089
 =======
   m_Volume: 0.09
 >>>>>>> 7254939434b7602dd3d67eac912243c5753069b6
+=======
+  m_Volume: 0.03
+>>>>>>> parent of 5cebaf03 (sound)
   m_Pitch: 1
   Loop: 1
   Mute: 0
