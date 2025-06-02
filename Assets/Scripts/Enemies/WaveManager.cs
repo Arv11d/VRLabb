@@ -7,6 +7,8 @@ public class WaveManager : MonoBehaviour
     public GameObject enemyPrefab;
     public Transform spawnPoint;
 
+    Vector3 SpawnPos;
+
     public int enemisPerWave = 10;
     public int totalWaves = 5;
     public int currentWave = 0;
@@ -18,7 +20,6 @@ public class WaveManager : MonoBehaviour
     {
         StartCoroutine(SpawnEnemies());
     }
-
     private void Update()
     {
         SpawnEnemies();
@@ -30,7 +31,10 @@ public class WaveManager : MonoBehaviour
             currentWaveEnemies.Clear();
             for (int i = 0; i < enemisPerWave; i++)
             {
-                GameObject enemy = Instantiate(enemyPrefab, spawnPoint.position, Quaternion.identity);
+                Vector3 offset = new Vector3(Random.Range(-2f, 2f), 0, Random.Range(-2f, 2f));
+                Vector3 spawnPos = spawnPoint.position + offset;
+
+                GameObject enemy = Instantiate(enemyPrefab, spawnPos, Quaternion.identity);
                 RagdollActivator controller = enemy.GetComponentInChildren<RagdollActivator>();
 
                 if (controller == null)
