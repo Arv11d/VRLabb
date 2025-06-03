@@ -21668,7 +21668,7 @@ PrefabInstance:
     - target: {fileID: 2101666176097190955, guid: aff59c8dfce4abc4ca8c2cefeb583395,
         type: 3}
       propertyPath: maxHP
-      value: 10
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2101666176097190955, guid: aff59c8dfce4abc4ca8c2cefeb583395,
         type: 3}
@@ -40258,12 +40258,12 @@ PrefabInstance:
     - target: {fileID: 1392692202545257908, guid: 3e3b6906493c65241960138484f9f85e,
         type: 3}
       propertyPath: m_Positions.Array.data[1].x
-      value: 0.00051378505
+      value: 0.000513785
       objectReference: {fileID: 0}
     - target: {fileID: 3823873492914141118, guid: 3e3b6906493c65241960138484f9f85e,
         type: 3}
       propertyPath: m_Positions.Array.data[1].x
-      value: 0.00051378505
+      value: 0.000513785
       objectReference: {fileID: 0}
     - target: {fileID: 5238033008697290478, guid: 3e3b6906493c65241960138484f9f85e,
         type: 3}
