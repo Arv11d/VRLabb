@@ -11451,7 +11451,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 1795718313}
   spawnPoint: {fileID: 668805620}
-  enemisPerWave: 2
+  enemiesPerWave: 1
   totalWaves: 5
   currentWave: 0
 --- !u!114 &668805622
@@ -11468,7 +11468,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 1820013058}
   spawnPoint: {fileID: 668805620}
-  enemisPerWave: 2
+  enemiesPerWave: 3
   totalWaves: 5
   currentWave: 0
 --- !u!114 &668805623
@@ -11485,7 +11485,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 481202716}
   spawnPoint: {fileID: 668805620}
-  enemisPerWave: 2
+  enemiesPerWave: 1
   totalWaves: 5
   currentWave: 0
 --- !u!1001 &675452815
@@ -30570,7 +30570,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c889df43f71a37045bd1adf8de570a47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetPoints: 8
+  targetPoints: 22
   object1: {fileID: 1634292212}
   object1MoveOffset: {x: 0, y: 0, z: 0}
   object1Rotation: {x: 0, y: 90, z: 0}
